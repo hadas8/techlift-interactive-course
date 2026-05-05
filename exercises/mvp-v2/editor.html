@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>עורך פעילות — חדר הבריחה של ה־MVP</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main class="editor-shell">
+    <header class="editor-header">
+      <h1 style="font-size:34px;margin-bottom:8px;">עורך פעילות</h1>
+      <p class="body-text">
+        כאן הצוות הפדגוגי יכול לערוך את הטקסטים, השאלות, התשובות, העיצוב והגדרות ההגשה.
+        בסיום מורידים קובץ <strong>config.json</strong> מעודכן ומחליפים אותו ב־GitHub.
+      </p>
+      <div class="editor-actions">
+        <a class="btn btn-secondary" href="./index.html" target="_blank">פתחו תצוגת תלמידים</a>
+        <button class="btn btn-primary" id="downloadConfig">הורדת config.json</button>
+        <button class="btn" id="copyConfig">העתקת JSON</button>
+        <label class="btn">
+          ייבוא config.json
+          <input type="file" id="importConfig" accept=".json,application/json" style="display:none">
+        </label>
+      </div>
+    </header>
+
+    <section class="editor-grid">
+      <nav class="editor-tabs" id="tabs"></nav>
+      <div id="panels"></div>
+    </section>
+  </main>
+
+  <script src="./assets/editor.js"></script>
+</body>
+</html>
